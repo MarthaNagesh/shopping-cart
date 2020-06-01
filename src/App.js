@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
   import ProductList from './components/ProductList';
   import Details from './components/Details';
   import Cart from './components/Cart';
-  import Default from './components/Default';
+  //import Default from './components/Default';
 
 
 export default class App extends Component {
@@ -20,7 +20,7 @@ export default class App extends Component {
           <Route exact path="/" component={ProductList}/>
           <Route path="/details" component={Details}/>
           <Route path="/cart" component={Cart}/>
-          <Route component={Default}/>
+          {/* <Route component={Default}/> */}
         </Switch>
         
         

@@ -15,6 +15,7 @@ export default class App extends Component {
     return (
       <div>
         <Navbar/>
+        <ProductList />
         <Switch>
           {/* exact is used to assign homepage path */}
           <Route exact path="/" component={ProductList}/>

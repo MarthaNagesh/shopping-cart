@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { storeProducts, detailProduct }  from './data';
-
+//import { get } from 'https';
 
 
 const ProductContext = React.createContext();// context is an object
@@ -11,9 +11,21 @@ const ProductContext = React.createContext();// context is an object
 
 class ProductProvider extends Component {
     state= {
-        products:storeProducts,
+        products:[],
         details: detailProduct,
         cart:[]
+    };
+    componentDidMount(){
+        this.setProducts();
+    }
+    setProducts = () =>{
+        let tempProducts = [];
+        storeProducts.forEach(item =>{
+            const singleItem = {...item};
+            tempProducts= [...tempProducts, singleItem];
+
+        });
+        this.setState({products: tempProducts});
     }
     getItem =id=>{
         const product= this.state.products.find(item=> item.id === id);

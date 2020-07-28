@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { storeProducts, detailProduct }  from './data';
-import { get } from 'https';
+
 
 
 const ProductContext = React.createContext();// context is an object
